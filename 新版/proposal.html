@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" media="all" type="text/css" href="./static/css/BobyStyle.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="./static/css/Book_Box.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="./static/css/Page_FloatShow.css" />
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script>
+        /*https://ithelp.ithome.com.tw/articles/10196961*/
+        function Set() {
+            $(".page_Show").hide();
+            document.getElementById('menu').style = "transform:translateY(50%);";
+            $(".wrapper").hide();
+        }
+        function Back() {
+            $(".page_Show").fadeOut(200);
+        }
+        /*避免w3內嵌無法使用js的狀況*/
+        function ShowPage(name) {
+            var head = "<iframe width='99%' height='96%' frameborder='no' scrolling='no' src='./data/article/proposal/", foot = ".html'></iframe> ";
+            $(".page_Show").fadeIn(200);
+            document.getElementById("page").innerHTML = head + name + foot;
+        }
+    </script>
+    <style>
+        body {
+            background-image: url("./static/img/background/background_3.jpg");
+        }
+    </style>
+</head>
+
+<body onload="Set()">
+    <link rel="stylesheet" media="all" type="text/css" href="./static/css/btn_OpenMenu.css" />
+    <script src="./static/JavaScript/btn_OpenMenu.js"></script>
+    <img class="OpenMenu_Btn" src="./static/img/icon/menu/Menu_Off.png"
+         onmouseout="this.src='./static/img/icon/menu/Menu_Off.png'" onmouseover="this.src='./static/img/icon/menu/Menu_On.png'" onclick="OpenMenu()" />
+    <div w3-include-html="./static/html/menu.html"></div>
+
+    <div class="mainbox">
+        <div class="book" id="book_TL">
+            <div onclick="ShowPage('影視概論企畫書')">
+                <img src="./static/img/logo/umbrella.png" />
+                <p>影視概論企畫書</p>
+            </div>
+        </div>
+        <!--
+         <div class="book" id="book_L">
+             <div onclick="ShowPage('IB廣播劇企劃書')">
+                 <img src="./static/img/logo/umbrella.png" />
+                 <p>IB廣播劇企劃書</p>
+             </div>
+         </div>
+         <div class="book" id="book_BL">
+             <div onclick="ShowPage('P的口味廣播劇企畫書')">
+                 <img src="./static/img/logo/umbrella.png" />
+                 <p>P的口味廣播劇企畫書</p>
+             </div>
+         </div>
+        -->
+
+    </div>
+
+    <div class="page_Show">
+        <div class="page_Article" id="page"></div><img class="page_AllBack" onclick="Back()" src="./static/img/icon/close.png" />
+    </div>
+    <div><br /></div>
+
+    <div w3-include-html="./static/html/frame.html"></div>
+    <!-- Optional JavaScript -->
+    <script>
+        w3.includeHTML();
+    </script>
+</body>
+</html>

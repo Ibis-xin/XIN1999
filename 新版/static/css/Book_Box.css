@@ -1,0 +1,89 @@
+﻿/*http://boohover.pixnet.net/blog/post/35341387-%E6%97%8B%E8%BD%89%E3%80%81%E5%82%BE%E6%96%9C%E3%80%81%E7%B8%AE%E6%94%BE%E7%9A%84%E8%AE%8A%E5%BD%A2%E6%95%88%E6%9E%9C-transform-%28css-prope */
+
+.mainbox {
+    position: fixed;
+    height: 96%;
+    width: 20%;
+    margin: 0px 0px 100px 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-arrow-color: black;
+    scrollbar-base-color: lightsalmon;
+    background-color: rgba(0,0,0,0.5);
+    /*background: linear-gradient(to left bottom,black, rgba(255,255,255,0));*/
+}
+
+.book {
+    cursor: pointer;
+    width: 70%;
+    height: auto;
+    margin: 10% 30% 10% 10%;
+    transition: all 0.2s;
+}
+
+    .book img {
+        width: 100%;
+        height: auto;
+        transition: all 2s;
+    }
+
+    .book p {
+        position: absolute;
+        width: 100%;
+        bottom: 50%;
+        text-align: center;
+        font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
+        letter-spacing: 3px;
+        opacity: 0;
+        transition: all 0.5s;
+    }
+
+    .book:hover p {
+        transform: scale(2,2);
+        text-shadow: 0 0 500px #808080;
+        opacity: 1;
+    }
+
+    .book:hover img {
+        transform: rotate(270deg);
+    }
+
+    .book:hover {
+        -webkit-filter: contrast(2);
+    }
+
+#book_TL:hover {
+    transform-origin: top left;
+}
+
+#book_T:hover {
+    transform-origin: top;
+}
+
+#book_TR:hover {
+    transform-origin: top right;
+}
+
+#book_L:hover {
+    transform-origin: left;
+}
+
+#book:hover {
+    transform-origin: center;
+}
+
+#book_R:hover {
+    transform-origin: right;
+}
+
+#book_BL:hover {
+    transform-origin: bottom left;
+}
+
+#book_B:hover {
+    transform-origin: bottom;
+}
+
+#book_BR:hover {
+    transform-origin: bottom right;
+}

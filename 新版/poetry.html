@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" media="all" type="text/css" href="./static/css/BobyStyle.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="./static/css/FrostedGlass.css" />
+    <style>
+        .mainbox {
+            cursor: pointer;
+            display: flex;
+            align-items: center; /*將<div>元素的所有項目的對齊居中：*/
+            justify-content: flex-end; /*置中*/
+            margin: 20px;
+        }
+
+            .mainbox:hover {
+                -webkit-filter: contrast(1.5);
+                transition: transform 0.6s;
+                transform-origin: right;
+                transform: translateX(-10px) scale(1.1,1.1);
+            }
+
+        body, .frostedglass::before {
+            background: url("./static/img/background/background_1.jpg") 0 / cover /*auto*/ fixed;
+        }
+    </style>
+
+    <link rel="stylesheet" media="all" type="text/css" href="./static/css/Page_FloatShow.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script>
+        /*https://ithelp.ithome.com.tw/articles/10196961*/
+        function Set() {
+            $(".page_All").hide();
+            document.getElementById('menu').style = "transform:translateY(50%);";
+            $(".wrapper").hide();
+        }
+        function Back() {
+            $(".page_All").fadeOut(200);
+        }
+
+        function ShowPage(name) {
+            var head = "<div w3-include-html='./data/other/poetry/", foot = ".txt'></div>"
+            $(".page_All").fadeIn(200);
+            document.getElementById("page").innerHTML = head + name + foot;
+            w3.includeHTML();
+        }
+    </script>
+</head>
+
+<body onload="Set()">
+    <link rel="stylesheet" media="all" type="text/css" href="./static/css/btn_OpenMenu.css" />
+    <script src="./static/JavaScript/btn_OpenMenu.js"></script>
+    <img class="OpenMenu_Btn" src="./static/img/icon/menu/Menu_Off.png"
+         onmouseout="this.src='./static/img/icon/menu/Menu_Off.png'" onmouseover="this.src='./static/img/icon/menu/Menu_On.png'" onclick="OpenMenu()" />
+    <div w3-include-html="./static/html/menu.html"></div>
+
+    <div class="page_All">
+        <div class="page_Article" id="page" style="line-height:50px"></div><img class="page_AllBack" onclick="Back()" src="./static/img/icon/close.png" />
+    </div>
+
+
+
+    <div class="mainbox">
+        <div class="frostedglass" onclick="ShowPage('舌頭太嫩會被鳳梨咬')" style="width:70%;">
+            <blockquote style="font-size:26px;">
+                舌頭太嫩會被鳳梨咬
+            </blockquote>
+        </div>
+    </div>
+    <div class="mainbox">
+        <div class="frostedglass" onclick="ShowPage('我可以抱著你入睡嗎？')" style="width:70%;">
+            <blockquote style="font-size:26px;">
+                我可以抱著你入睡嗎？
+            </blockquote>
+        </div>
+    </div>
+    <div class="mainbox">
+        <div class="frostedglass" onclick="ShowPage('我看起來好了')" style="width:70%;">
+            <blockquote style="font-size:26px;">
+                我看起來好了
+            </blockquote>
+        </div>
+    </div>
+    <div class="mainbox">
+        <div class="frostedglass" onclick="ShowPage('我們是彼此追逐的旋轉木馬')" style="width:70%;">
+            <blockquote style="font-size:26px;">
+                我們是彼此追逐的旋轉木馬
+            </blockquote>
+        </div>
+    </div>
+    <div class="mainbox">
+        <div class="frostedglass" onclick="ShowPage('我想寫一首明亮的詩')" style="width:70%;">
+            <blockquote style="font-size:26px;">
+                我想寫一首明亮的詩
+            </blockquote>
+        </div>
+    </div>
+    <div class="mainbox">
+        <div class="frostedglass" onclick="ShowPage('拿我貧血的大腦換你斷掉的肋骨好不好')" style="width:70%;">
+            <blockquote style="font-size:26px;">
+                拿我貧血的大腦換你斷掉的肋骨好不好
+            </blockquote>
+        </div>
+    </div>
+    <div class="mainbox">
+        <div class="frostedglass" onclick="ShowPage('雪你還是被堆成雪人去吧')" style="width:70%;">
+            <blockquote style="font-size:26px;">
+                雪你還是被堆成雪人去吧
+            </blockquote>
+        </div>
+    </div>
+    <div class="mainbox">
+        <div class="frostedglass" onclick="ShowPage('慣性思維')" style="width:70%;">
+            <blockquote style="font-size:26px;">
+                慣性思維
+            </blockquote>
+        </div>
+    </div>
+    <div class="mainbox">
+        <div class="frostedglass" onclick="ShowPage('親愛的朋友')" style="width:70%;">
+            <blockquote style="font-size:26px;">
+                親愛的朋友
+            </blockquote>
+        </div>
+    </div>
+    <div class="mainbox">
+        <div class="frostedglass" onclick="ShowPage('貓的形狀')" style="width:70%;">
+            <blockquote style="font-size:26px;">
+                貓的形狀
+            </blockquote>
+        </div>
+    </div>
+
+
+
+    <div><br /></div>
+
+    <div w3-include-html="./static/html/frame.html"></div>
+    <!-- Optional JavaScript -->
+    <script>
+        w3.includeHTML();
+    </script>
+</body>
+</html>

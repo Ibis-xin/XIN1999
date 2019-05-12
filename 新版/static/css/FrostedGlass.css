@@ -1,0 +1,22 @@
+﻿.frostedglass::before {
+    content: "";
+    position: absolute; /*absolute：絕對位置，當網頁往下拉時，元素也會跟著改變位置，其元素的位置由 top、left、right、bottom 所決定。*/
+    margin: -30px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; /*设置全部偏移量为0，可以将它完整覆盖在宿主元素上*/
+    z-index: -1;
+    filter: blur(10px);
+}
+
+.frostedglass {
+    position: relative; /* relative：相對位置，相對於其它元素的位置，其元素的位置由 top、left、right、bottom 所決定。*/
+    overflow: hidden; /*自動隱藏超出的文字或圖片*/
+    width: 50%;
+    /*min-height: 700px;/**/
+    padding:20px 60px;
+    line-height:39px;
+    background: hsla(0, 0%, 100%, 0.3) border-box;
+    box-shadow: 2px 2px 8px; /*陰影*/
+}

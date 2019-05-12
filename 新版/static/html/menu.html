@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'lato';
+            list-style: none;
+            text-decoration: none;
+        }
+
+        .wrapper {
+            z-index: 1010;
+            cursor: pointer;
+            background: linear-gradient(to left bottom,black, rgba(255,255,255,0));
+            box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
+            position: fixed;
+            top: 0%;
+            right: 0%;
+            bottom: 0%;
+            width: 350px;
+            padding: 40px 20px;
+            /* transform: translate(-50%, -50%);*/
+            overflow-y: scroll;
+            overflow-x: visible;
+            float: left;
+        }
+
+        .mainMenu {
+            width: 350px;
+            display: block;
+            /*border-radius: 10px;*/
+            overflow: hidden;
+        }
+
+        .item {
+            /*border-top: 1px solid #ef584a;*/
+            overflow: hidden;
+        }
+
+            .item p {
+                position: absolute;
+                top: 30%;
+                right: -100%;
+                -webkit-transition: all 0.25s ease;
+                transition: all 0.25s ease;
+                -webkit-transition-delay: 0.25s;
+                transition-delay: 0.25s;
+            }
+
+            .item a:hover p {
+                -webkit-transition-delay: 0.5s;
+                transition-delay: 0.5s;
+                right: 40%;
+                left: auto;
+                box-shadow: 0 10px 10px -10px #ccc; /*下 上边阴影*/
+            }
+
+        .btn {
+            text-align: right; /*文字向右*/
+            font-size: 30px;
+            display: block;
+            margin:10px;
+            padding: 15px 30px 15px 0px;
+            /*background-color: #ff6f61; */
+            color: #fff;
+            position: relative;
+        }
+
+            .btn i {
+                margin-right: 10px;
+            }
+
+        .subMenu {
+            /*background: #273057;*/
+            overflow: hidden;
+            transition: max-height 0.7s;
+            max-height: 0;
+        }
+
+            .subMenu a {
+                height: 70px;
+                text-align: right; /*文字向右*/
+                display: block;
+                padding: 15px 30px 15px 0px;
+                color: #fff;
+                font-size: 24px;
+                /*border-bottom: 1px solid #394c7f; */
+                position: relative;
+            }
+
+                .subMenu a:after {
+                    content: '';
+                    opacity: 0;
+                    transition: opacity 0.3s;
+                }
+
+                .subMenu a:hover:after {
+                    content: '';
+                    position: absolute;
+                    height: 0;
+                    width: 6px;
+                    right: 0px;
+                    top: 0;
+                    opacity: 1;
+                    /* background-color: #d8d824; */
+                    border-top: 24px solid transparent;
+                    border-right: 11px solid #f3f3f3;
+                    border-bottom: 24px solid transparent;
+                }
+
+                .subMenu a:last-child {
+                    border: none;
+                }
+
+        .item:target .subMenu {
+            max-height: 30em;
+        }
+
+
+        /*icon*/
+        .icon {
+            margin: -10px;
+            width: 90px;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+            .icon:hover {
+                transform: scale(1.2);
+                box-shadow: 0 10px 10px -10px #ccc; /*下 上边阴影*/
+            }
+
+        .subIcon {
+            position: absolute;
+            right: 10%;
+            margin: -10px 0px;
+            width: 60px;
+            height: 60px;
+            transition: transform 1s;
+        }
+
+            .subIcon:hover {
+                transform: rotate(360deg);
+                box-shadow: 0 10px 10px -10px #ccc; /*下 上边阴影*/
+            }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper" id="menu">
+        <ui class="mainMenu">
+            <li class="item" id="account">
+                <a href="#account" class="btn"><i class="fas fa-user-circle"></i><p>Presentation</p><img class="icon" src="./static/img/icon/menu/基本資料.png" /></a>
+                <div class="subMenu">
+                    <a href="./introduction.html"><p>Introduction</p><img class="subIcon" src="./static/img/icon/menu/基本資料單圓.png" /></a><!--介紹-->
+                  <!--<a href="./autobiography.html"><p>Autobiography</p><img class="subIcon" src="./static/img/icon/menu/基本資料單圓.png" /></a><!--自傳-->
+                </div>
+            </li>
+            <li class="item" id="design">
+                <a href="#design" class="btn"><i class="fas fa-address-card"></i><p>Design</p><img class="icon" src="./static/img/icon/menu/設計.png" /></a>
+                <div class="subMenu">
+                    <a href="./logo.html"><p>Logo</p><img class="subIcon" src="./static/img/icon/menu/設計單圓.png" /></a>
+                    <a href="./propaganda.html"><p>Propaganda</p><img class="subIcon" src="./static/img/icon/menu/設計單圓.png" /</a>
+                    <a href="./graphic.html"><p>Graphic</p><img class="subIcon" src="./static/img/icon/menu/設計單圓.png" /></a><!--靜態設計-->
+                    <a href="./animation.html"><p>Animation</p><img class="subIcon" src="./static/img/icon/menu/設計單圓.png" /></a><!--動態設計-->
+                </div>
+            </li>
+            <li class="item" id="article">
+                <a href="#article" class="btn"><i class="fas fa-info"></i><p>Article</p><img class="icon" src="./static/img/icon/menu/文章.png" /></a>
+                <div class="subMenu">
+                    <a href="./copy.html"><p>Copy</p><img class="subIcon" src="./static/img/icon/menu/文章單圓.png" /></a><!--文案-->
+                    <a href="./proposal.html"><p>Proposal</p><img class="subIcon" src="./static/img/icon/menu/文章單圓.png" /></a><!--企劃書-->
+                </div>
+            </li>
+            <li class="item" id="other">
+                <a href="#other" class="btn"><i class="fas fa-info"></i><p>Other</p><img class="icon" src="./static/img/icon/menu/其他.png" /></a>
+                <div class="subMenu">
+                    <!--<a href="./dubbing.html"><p>Dubbing</p><img class="subIcon" src="./static/img/icon/menu/其他單圓.png" /></a><!--配音-->
+                    <a href="./poetry.html"><p>Poetry</p><img class="subIcon" src="./static/img/icon/menu/其他單圓.png" /></a><!--新詩-->
+                    <!--<a href="./photo.html"><p>Photo</p><img class="subIcon" src="./static/img/icon/menu/其他單圓.png" /></a><!--攝影-->
+                </div>
+            </li>
+        </ui>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>XIN</title>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" media="all" type="text/css" href="./static/css/BobyStyle.css" />
+    <style>
+        /*主LOGO*/
+        .indexLOGO {
+            position: fixed;
+            top: 10%;
+            left: 32%;
+            width: 36%;
+            /* transform: translate(-50%, -50%);*/
+        }
+
+        /*https://cythilya.github.io/2017/08/27/css-animation/#animation-%E5%8B%95%E7%95%AB 動畫效果*/
+        /*https://blog.xuite.net/linriva/blog/49636594-%5BHTML%5D+%E6%BB%91%E9%BC%A0%E7%B6%93%E9%81%8E%E6%8F%9B%E5%9C%96+onMouseOut+%2F+onMouseOver 滑鼠經過換圖*/
+
+        .Planet {
+            position: absolute;
+            width: 100%;
+            z-index: 0;
+            animation: PlanetMove 5s infinite;
+        }
+
+        .Sky {
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .sinping {
+            position: absolute;
+            left: 40%;
+            width: 30%;
+            z-index: 2;
+            animation: Light 5s infinite;
+        }
+
+        @keyframes Light {
+            0% {
+                -webkit-filter: brightness(1);
+            }
+
+            50% {
+                -webkit-filter: brightness(1.5);
+            }
+
+            100% {
+                -webkit-filter: brightness(1);
+            }
+        }
+
+        @keyframes PlanetMove {
+            0% {
+                transform: rotate(1deg)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        function Set() {
+            $(document).ready(function () { $("#StartAnimationLogo").hide(); });
+            setTimeout(function () { $(".StartAnimationContainer").fadeOut(1000); }, 2500);
+            setTimeout(function () { $("#StartAnimationLogo").fadeIn(1000); }, 3000);
+            setTimeout(function () { $(".StartAnimationScreen").fadeOut(800); }, 4000);
+        }
+    </script>
+</head>
+<body onload="Set()">
+    <div w3-include-html="./static/html/StartAnimation/indexLoading.html"></div>
+    <div class="indexLOGO">
+        <img class="Planet" src="./static/img/logo/index_logo/星球.png" />
+        <img class="Sky" src="./static/img/logo/index_logo/環雨雲.png" />
+        <img class="sinping" src="./static/img/logo/index_logo/人與狗.png" />
+    </div>
+    <div w3-include-html="./static/html/menu.html"></div>
+    <div w3-include-html="./static/html/frame.html"></div>
+    <!-- Optional JavaScript -->
+    <script>
+        w3.includeHTML();
+    </script>
+</body>
+</html>

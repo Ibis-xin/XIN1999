@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <link rel="stylesheet" media="all" type="text/css" href="../../../static/css/BobyStyle.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="./proposal.css" />
+
+    <script>
+        function ShowContent(li, name) {
+            var head = "<div w3-include-html='./P的口味廣播劇企畫書/", foot = ".txt'></div>";
+            document.getElementById("pageContent").innerHTML = head + name + foot;
+            w3.includeHTML();
+            var itemNum = 2;
+            for (i = 1; i <= itemNum; i++) { document.getElementById("item_" + i).style.backgroundColor = " rgb(0,0,0,0)"; }
+            li.style.backgroundColor = "rgb(0,0,0,0.8)";
+        }
+    </script>
+</head>
+<body>
+    <div class="pageList">
+        <ul id="pageMeun">
+            <li id="item_1" onclick="ShowContent(this, '企劃書')">企劃書</li>
+            <li id="item_2" onclick="ShowContent(this,'台詞本')">台詞本</li>
+        </ul>
+    </div>
+    <div id="pageContent">
+        <div style="padding:10px"></div>
+    </div>
+    <!-- Optional JavaScript -->
+    <script>
+        w3.includeHTML();
+    </script>
+</body>
+</html>

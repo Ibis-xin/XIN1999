@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Propaganda</title>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" media="all" type="text/css" href="./static/css/BobyStyle.css" />
+    <link rel="stylesheet" href="./static/css/Detail.css" />
+
+    <style>
+        .snip1584 {
+            min-width: 45%; /* 230px;*/
+            max-width: 45%; /*315px;*/
+            min-height: 45%;
+            max-height: 45%;
+        }
+
+        figure {
+            background: hsla(0, 0%, 100%, 0.3) border-box;
+        }
+
+        body {
+            background-size: cover;
+        }
+    </style>
+
+
+    <link rel="stylesheet" media="all" type="text/css" href="./static/css/Page_FloatShow.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script>
+        /*https://ithelp.ithome.com.tw/articles/10196961*/
+        function Set() {
+            $(".page_All").hide();
+            document.getElementById('menu').style = "transform:translateY(50%);";
+            $(".wrapper").hide();
+        }
+        function Back() {
+            $(".page_All").fadeOut(200);
+        }
+
+        function ShowPage(name) {
+            var head = "<div w3-include-html='./data/design/propaganda/", foot = ".html'></div>"
+            $(".page_All").fadeIn(200);
+            document.getElementById("page").innerHTML = head + name + foot;
+            w3.includeHTML();
+        }
+    </script>
+</head>
+<body onload="Set()">
+    <div w3-include-html="./static/html/menu.html"></div>
+    <link rel="stylesheet" media="all" type="text/css" href="./static/css/btn_OpenMenu.css" />
+    <script src="./static/JavaScript/btn_OpenMenu.js"></script>
+    <img class="OpenMenu_Btn" src="./static/img/icon/menu/Menu_Off.png"
+         onmouseout="this.src='./static/img/icon/menu/Menu_Off.png'" onmouseover="this.src='./static/img/icon/menu/Menu_On.png'" onclick="OpenMenu()" />
+    
+
+    <div class="page_All">
+        <div id="page" class="page_Article"></div> <img class="page_AllBack" onclick="Back()" src="./static/img/icon/close.png" />
+    </div>
+
+
+    <div><br /><br /><br /><br /><br /><br /></div>
+    <div class="form">
+        <figure class="snip1584">
+            <img src="./data/design/propaganda/img/千日紅茶帖.jpg" />
+            <figcaption>
+                <h1 style="font-size: 52px;">千日紅茶會茶帖設計</h1>
+                <p onclick="ShowPage('千日紅茶會茶帖設計')" style="width:auto; height:auto; padding:10px; font-size: 36px;">　…More　</p>
+            </figcaption>
+        </figure>
+        <figure class="snip1584">
+            <img src="./data/design/propaganda/img/不遠茶會/茶帖1.png" />
+            <figcaption>
+                <h1 style="font-size: 52px;">不遠茶會茶帖設計</h1>
+                <p onclick="ShowPage('不遠茶會茶帖設計')" style="width:auto; height:auto; padding:10px; font-size: 36px;">　…More　</p>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="form">
+        <figure class="snip1584">
+            <img src="./data/design/propaganda/img/日嚐字型設計.jpg" />
+            <figcaption>
+                <h1 style="font-size: 52px;">日嚐字型設計</h1>
+                <p onclick="ShowPage('日嚐字型設計')" style="width:auto; height:auto; padding:10px; font-size: 36px;">　…More　</p>
+            </figcaption>
+        </figure>
+        <figure class="snip1584">
+            <img src="./data/design/propaganda/img/江樵授課海報.jpg" />
+            <figcaption>
+                <h1 style="font-size: 52px;">江樵授課海報</h1>
+                <p onclick="ShowPage('江樵授課海報')" style="width:auto; height:auto; padding:10px; font-size: 36px;">　…More　</p>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="form">
+        <figure class="snip1584">
+            <img src="./data/design/propaganda/img/華山論簡/行前通知/2019行前通知_1.jpg" />
+            <figcaption>
+                <h1 style="font-size: 52px;">華山論簡</h1>
+                <p onclick="ShowPage('華山論簡')" style="width:auto; height:auto; padding:10px; font-size: 36px;">　…More　</p>
+            </figcaption>
+        </figure>
+        <figure class="snip1584">
+            <img src="./data/design/propaganda/img/聖誕老公公漱漱來.jpg" />
+            <figcaption>
+                <h1 style="font-size: 52px;">聖誕老公公漱漱來</h1>
+                <p onclick="ShowPage('聖誕老公公漱漱來')" style="width:auto; height:auto; padding:10px; font-size: 36px;">　…More　</p>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="form">
+        <figure class="snip1584">
+            <img src="./data/design/propaganda/img/電腦藝術人像海報.jpg" />
+            <figcaption>
+                <h1 style="font-size: 52px;">電腦藝術人像海報</h1>
+                <p onclick="ShowPage('電腦藝術人像海報')" style="width:auto; height:auto; padding:10px; font-size: 36px;">　…More　</p>
+            </figcaption>
+        </figure>
+        <figure class="snip1584">
+            <img src="./data/design/propaganda/img/管理概論三折頁封面.jpg" />
+            <figcaption>
+                <h1 style="font-size: 52px;">管理概論三折頁</h1>
+                <p onclick="ShowPage('管理概論三折頁')" style="width:auto; height:auto; padding:10px; font-size: 36px;">　…More　</p>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="form">
+        <figure class="snip1584">
+            <img src="./data/design/propaganda/img/第一則文案.jpg" />
+            <figcaption>
+                <h1 style="font-size: 52px;">數位內容設計第一則圖像</h1>
+                <p onclick="ShowPage('數位內容設計第一則圖像')" style="width:auto; height:auto; padding:10px; font-size: 36px;">　…More　</p>
+            </figcaption>
+        </figure>
+        <figure class="snip1584">
+            <img src="./data/design/propaganda/img/第三則文案.jpg" />
+            <figcaption>
+                <h1 style="font-size: 52px;">數位內容設計第三則圖像</h1>
+                <p onclick="ShowPage('數位內容設計第三則圖像')" style="width:auto; height:auto; padding:10px; font-size: 36px;">　…More　</p>
+            </figcaption>
+        </figure>
+    </div>
+
+    <div><br /></div>
+
+
+    <div w3-include-html="./static/html/frame.html"></div>
+    <!-- Optional JavaScript -->
+    <script>
+        w3.includeHTML();
+    </script>
+</body>
+</html>
+
