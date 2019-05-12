@@ -1,0 +1,57 @@
+﻿body {
+    background-color: #221F1F;
+    color:white;
+    background-size:cover;
+}
+
+    body * {
+        margin: 0;
+        padding: 0;
+        font-family: 'lato';
+        list-style: none;
+        text-decoration: none;
+        /*禁止反白*/
+        -moz-user-select: none; /* for Firefox */
+        -webkit-user-select: none; /* for Chrome */
+        unselectable ="on"; /*IE*/
+        /*IE卷軸顏色 https://blog.xuite.net/mos1618/love/9692674-%E3%80%90%E7%AD%86%E8%A8%98%E3%80%91CSS%E6%B8%B8%E6%A8%99%E9%80%A3%E7%B5%90%E8%88%87%E6%8D%B2%E8%BB%B8%E8%A8%AD%E5%AE%9A%E6%95%B4%E7%90%86*/
+        /*Chrome卷軸顏色 https://blog.xuite.net/aab901006/twblog/213059393-%E7%94%A8Chrome%E7%80%8F%E8%A6%BD%E5%99%A8%E8%A7%80%E7%9C%8B%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%B0%87%E6%8D%B2%E8%BB%B8%E8%A8%AD%E6%88%90%E6%9C%89%E9%A1%8F%E8%89%B2*/
+    }
+
+/* 捲軸底色 */
+::-webkit-scrollbar {
+    background-color: rbga(0,0,0,0.7);
+}
+/* 捲軸上方的箭頭 */
+::-webkit-scrollbar-button:vertical:decrement {
+    background-image: url("上方箭頭圖片網址");
+    background-repeat: no-repeat;
+}
+
+/* 捲軸下方的箭頭 */
+::-webkit-scrollbar-button:vertical:increment {
+    background-image: url("下方箭頭圖片網址");
+    background-repeat: no-repeat;
+}
+
+/* 捲軸拉的軸軌的顏色 */
+::-webkit-scrollbar-thumb {
+    background-color: #696969;
+}
+    /* 捲軸拉的垂直軸軌設成圓角及顏色 */
+    ::-webkit-scrollbar-thumb:vertical {
+        height: 50px;
+        background-color: #696969;
+    }
+
+    /* 捲軸拉的橫向軸軌設成圓角及顏色 */
+    ::-webkit-scrollbar-thumb:horizontal {
+        width: 50px;
+        background-color: #696969;
+        -webkit-border-radius: 3px; /*圓角*/
+    }
+
+/*滾動軸上下左右的最上端角*/
+::-webkit-scrollbar-corner {
+    background-color: #79b5dd;
+}

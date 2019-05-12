@@ -1,0 +1,16 @@
+﻿/*https://cythilya.github.io/2017/08/27/css-animation/#animation-%E5%8B%95%E7%95%AB 動畫效果*/
+/*https://blog.xuite.net/linriva/blog/49636594-%5BHTML%5D+%E6%BB%91%E9%BC%A0%E7%B6%93%E9%81%8E%E6%8F%9B%E5%9C%96+onMouseOut+%2F+onMouseOver 滑鼠經過換圖*/
+.OpenMenu_Btn {
+    cursor: pointer;
+    position: fixed;
+    right: 0%;
+    bottom: 0%;
+    width: 100px;
+    height: 100px;
+    z-index: 1011; /*比表單高*/
+    transition: transform 1s;
+}
+
+    .OpenMenu_Btn:hover {
+        transform: rotate(360deg) scale(1.2,1.2)
+    }

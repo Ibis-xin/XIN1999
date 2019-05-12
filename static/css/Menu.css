@@ -1,0 +1,81 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+
+.menu {
+    background-color: black;
+    margin: -8px -8px -8px 0px;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+.snip1262 {
+    font-family: 'Raleway', Arial, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+    .snip1262 * {
+        box-sizing: border-box;
+        -webkit-transition: all 0.35s linear;
+        transition: all 0.35s linear;
+    }
+
+    .snip1262 li {
+        display: inline-block;
+        list-style: outside none none;
+        margin: 0px 0px -10px 0px;
+        padding: 1em;
+        overflow: hidden;
+    }
+
+    .snip1262 a {
+        cursor:pointer;
+        padding: 0.3em 0.8em;
+        backface-visibility: hidden;
+        color: #bfbfbf;
+        display: block;
+        line-height: 2em;
+        padding: 0 1em;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        -webkit-transform-origin: 0 50%;
+        -ms-transform-origin: 0 50%;
+        transform-origin: 0 50%;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+
+        .snip1262 a:after {
+            -webkit-transition: all 0.35s linear;
+            transition: all 0.35s linear;
+            background-color: #eee; /* #c0392b;*/
+            color: black/*transparent*/;
+            content: attr(data-hover);
+            left: 0;
+            line-height: 2em;
+            position: absolute;
+            bottom: 100%;
+            width: 100%;
+            opacity: 0.4;
+        }
+
+    .snip1262 li:hover a,
+    .snip1262 li.current a {
+        -webkit-transform: rotateX(-90deg);
+        transform: rotateX(-90deg);
+        color: transparent;
+    }
+
+        .snip1262 li:hover a:after,
+        .snip1262 li.current a:after {
+            opacity: 1;
+            color: #000; 
+            -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+        }
+/* Demo purposes only */
+body {
+    /*background-color: #212121;/**/
+}

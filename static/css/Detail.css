@@ -1,0 +1,146 @@
+﻿
+.form {
+    display: flex;
+    align-items: center; /*將<div>元素的所有項目的對齊居中：*/
+    justify-content: center; /*置中*/
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+.snip1584 {
+    /*border-radius: 24px 24px 24px 24px; /*圓角*/
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 20px 20px 20px 20px;
+    min-width: 90%; /* 230px;*/
+    max-width: 90%; /*315px;*/
+    min-height: 90%;
+    max-height: 90%;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: left;
+}
+
+    .snip1584 * {
+        /*border-radius: 24px 24px 24px 24px; /*圓角*/
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+    }
+
+    .snip1584:before {
+        /*border-radius: 24px 24px 24px 24px; /*圓角*/
+        position: absolute;
+        top: 10px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        top: 100%;
+        content: '';
+        background-color: rgba(119,136,153, 0.6);
+        -webkit-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+        -webkit-transition-delay: 0.25s;
+        transition-delay: 0.25s;
+    }
+
+    .snip1584 img {
+        padding:50px;
+        margin: 0px;
+        vertical-align: top;
+        max-width: 540px;
+        max-height: auto;
+        backface-visibility: hidden;
+    }
+
+    .snip1584 figcaption {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        align-items: center;
+        display: flex;
+        flex-direction: column; /*在flex中 上下排版*/
+        justify-content: center; /*置中*/
+    }
+
+    .snip1584 h1,
+    .snip1584 p {
+        opacity: 0;
+        letter-spacing: 1px;
+    }
+
+    .snip1584 h1 {
+        margin: 40px 40px 20px 40px; /*兩個內容外距*/
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+        text-transform: uppercase;
+        font-weight: 400;
+        -webkit-transition-delay: 0.05s;
+        transition-delay: 0.05s;
+        margin-bottom: 5px;
+    }
+
+    .snip1584 p {
+        cursor: pointer;
+        word-wrap: break-word; /*自動換行*/
+        margin: 20px 40px 40px 40px; /*兩個內容外距*/
+        padding: 50px;
+        width: 90%;
+        height: 90%;
+        font-weight: normal;
+        background-color: #3c3c3c;
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s;
+        overflow-y: hidden;
+    }
+
+    .snip1584 a {
+        /*
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;*/
+    }
+
+    .snip1584:hover:before,
+    .snip1584.hover:before {
+        top: 10px;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s;
+    }
+
+    .snip1584:hover h1,
+    .snip1584.hover h1,
+    .snip1584:hover p,
+    .snip1584.hover p {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .snip1584:hover h1,
+    .snip1584.hover h1 {
+        -webkit-transition-delay: 0.3s;
+        transition-delay: 0.3s;
+    }
+
+    .snip1584:hover p,
+    .snip1584.hover p {
+        -webkit-transition-delay: 0.2s;
+        transition-delay: 0.2s;
+    }
+
+figure {
+    background: hsla(0, 0%, 100%, 0.3) border-box;
+}

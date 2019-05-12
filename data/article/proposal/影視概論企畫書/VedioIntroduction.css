@@ -1,0 +1,11 @@
+﻿.VedioIntroduction {
+    width:100%;
+    font-size:18px;
+}
+
+    .VedioIntroduction table {
+        width: 100%;
+    }
+    .VedioIntroduction img {
+        width: 150px;
+    }

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Introduction</title>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <link rel="stylesheet" media="all" type="text/css" href="./static/css/BobyStyle.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="./static/css/Menu.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="./static/css/FrostedGlass.css" />
+    <style>
+        .mainbox {
+            display: flex;
+            align-items: center; /*將<div>元素的所有項目的對齊居中：*/
+            justify-content: center; /*置中*/
+        }
+
+        body, .frostedglass::before {
+            background: url("./static/img/background/background_2.jpg") 0 / cover /*auto*/ fixed;
+        }
+
+        .Project {
+            width: 300px;
+            height: 300px;
+            float: left;
+            margin: 40px 20px 0px 50px;
+            border-radius: 24px 24px 24px 24px; /*圓角*/
+        }
+    </style>
+
+    <script>
+        /*https://ithelp.ithome.com.tw/articles/10196961*/
+        function Set() {
+            document.getElementById('menu').style = "transform:translateY(50%);";
+            $(".wrapper").hide();
+        }
+        function ShowPage(name) {
+            var head = "<div w3-include-html='./data/presentation/introduction/", foot = ".html'></div>"
+            document.getElementById("page").innerHTML = head + name + foot;
+            w3.includeHTML();
+        }
+    </script>
+</head>
+<body onload="Set()">
+    <link rel="stylesheet" media="all" type="text/css" href="./static/css/btn_OpenMenu.css" />
+    <script src="./static/JavaScript/btn_OpenMenu.js"></script>
+    <img class="OpenMenu_Btn" src="./static/img/icon/menu/Menu_Off.png"
+         onmouseout="this.src='./static/img/icon/menu/Menu_Off.png'" onmouseover="this.src='./static/img/icon/menu/Menu_On.png'" onclick="OpenMenu()" />
+    <div w3-include-html="./static/html/menu.html"></div>
+
+    <div class="menu">
+        <ul class="snip1262">
+            <li><a onclick="ShowPage('基本資料')" href="#" data-hover="基本資料">基本資料</a></li>
+            <li><a onclick="ShowPage('興趣')" href="#" data-hover="興趣">興趣</a></li>
+            <li><a onclick="ShowPage('學歷')" href="#" data-hover="學歷">學歷</a></li>
+            <li><a onclick="ShowPage('經歷')" href="#" data-hover="經歷">經歷</a></li>
+        </ul>
+    </div>
+    <div><br /><br /><br /><br /><br /></div>
+    <div class="mainbox">
+        <div class="frostedglass">
+            <blockquote id="page" style="font-size:26px;">
+                <div w3-include-html="./data/presentation/introduction/基本資料.html"></div>
+            </blockquote>
+        </div>
+    </div>
+    <br /><br /><br />
+    <div w3-include-html="./static/html/frame.html"></div>
+    <!-- Optional JavaScript -->
+    <script>
+        w3.includeHTML();
+    </script>
+</body>
+</html>

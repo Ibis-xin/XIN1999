@@ -1,0 +1,20 @@
+﻿#introduction {
+    line-height: 50px;
+}
+
+    #introduction td {
+        padding: 10px 0px;
+        vertical-align: text-top;
+        line-height: 40px;
+    }
+
+    #introduction li {
+        padding: 0px 10px;
+        border-radius: 13px 13px 13px 13px;
+        list-style-type: circle;
+        cursor: pointer;
+    }
+
+        #introduction li:hover {
+            background-color: rgba(67,67,67,0.7);
+        }
